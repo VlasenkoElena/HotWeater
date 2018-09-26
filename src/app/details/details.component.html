@@ -1,46 +1,14 @@
-<div class="activity_box">
-  <div class="scrollbar" id="style-2">
-    <div class="activity-row">
-      <div class="activity-desc">
-        <h5>Resort Address</h5>
-        <p>Sed perspiciatis</p>
-        <p>Et harum quidem</p>
-        <h6>Tel:+1285 968 685</h6>
-      </div>
-      <div class="activity-img">
-        <ul>
-          <li><img src='./assets/img/res.jpg' alt="" /></li>
-          <li><img src='./assets/img/r1.jpg' alt="" /></li>
-        </ul>
-      </div>
-    </div>
-    <div class="activity-row">
-        <div class="activity-desc">
-          <h5>Resort Address</h5>
-          <p>Sed perspiciatis</p>
-          <p>Et harum quidem</p>
-          <h6>Tel:+1285 968 685</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img src='./assets/img/2.jpg' alt="" /></li>
-            <li><img src='./assets/img/rest03.jpg' alt="" /></li>
-          </ul>
-        </div>
-      </div>
-      <div class="activity-row">
-          <div class="activity-desc">
-            <h5>Resort Address</h5>
-            <p>Sed perspiciatis</p>
-            <p>Et harum quidem</p>
-            <h6>Tel:+1285 968 685</h6>
-          </div>
-          <div class="activity-img">
-            <ul>
-              <li><img src='./assets/img/gora.jpg' alt="" /></li>
-              <li><img src='./assets/img/res_g.jpg' alt="" /></li>
-            </ul>
-          </div>
-        </div>
+<div class="activity-row">
+  <div class="activity-desc">
+    <h5>{{info.title}}</h5>
+    <p>Sed perspiciatis</p>
+    <p>Et harum quidem</p>
+    <h6>{{info.phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li><img src="{{info.photo[0]}}" alt=""></li>
+      <li><img src="{{info.photo[1]}}" alt="" /></li>
+    </ul>
   </div>
 </div>

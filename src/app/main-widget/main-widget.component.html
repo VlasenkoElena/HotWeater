@@ -12,7 +12,11 @@
     <div class="village">
         <h3>Righteous indignation & like</h3>
         <span class="line"> </span>
-        <app-details></app-details>       
+        <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+            <app-details [info]="i"  *ngFor="let i of info"></app-details> 
+        </div>
+        </div>      
     </div>
 </div>
 </div>

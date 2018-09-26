@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-widget',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainWidgetComponent implements OnInit {
 
+  @Input() info;
   constructor() { }
 
   ngOnInit() {
+    console.log(this.info); 
   }
 
 }

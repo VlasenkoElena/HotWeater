@@ -38,3 +38,25 @@ span.line {
   display: block;
   margin: 0.6em auto 0em;
 }
+.activity_box {
+  background: #fff;
+  min-height: 120px;
+}
+.scrollbar {
+  height: 115px;
+  background: #fff;
+  overflow-y: scroll;
+  padding: 1em 1em 0em 1em;
+}
+#style-2::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  background-color: #fda660;
+}
