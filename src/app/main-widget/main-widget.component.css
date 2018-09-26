@@ -1,0 +1,40 @@
+.ele-strip {
+  background: #fda660;
+  padding: 1em 1em;
+  margin: -3px 0px 0px 0px;
+}
+.ele-strip ul {
+  text-align: center;
+}
+.ele-strip ul li {
+  display: inline-block;
+  padding: 0em 0.5em;
+  border-right: 1px solid #fff;
+}
+.ele-strip ul li a {
+  font-size: 1em;
+  color: #fff;
+}
+.element-bg-img img {
+  width: 100%;
+  border-radius: 6px 6px 0px 0px;
+}
+.village {
+  background: #fff;
+  padding: 1.5em 1em;
+  border-radius: 0px 0px 5px 5px;
+}
+.village h3 {
+  text-align: center;
+  font-size: 0.95em;
+  color: #000;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+span.line {
+  background: url(../../assets/img/line.png) no-repeat;
+  width: 103px;
+  height: 2px;
+  display: block;
+  margin: 0.6em auto 0em;
+}

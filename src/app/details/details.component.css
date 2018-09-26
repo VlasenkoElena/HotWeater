@@ -1,0 +1,72 @@
+.activity_box {
+  background: #fff;
+  min-height: 120px;
+}
+.scrollbar {
+  height: 115px;
+  background: #fff;
+  overflow-y: scroll;
+  padding: 1em 1em 0em 1em;
+}
+.activity-row {
+  display: flex;
+  margin-bottom: 1em;
+  }
+.activity-desc {
+  width: 50%;
+}
+.activity-img {
+  width: 50%;
+}
+.activity-img ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.activity-img ul li img {
+  border-radius: 50px;
+}
+
+.activity-row,
+.activity-row1 {
+  text-align: left;
+}
+.activity-img {
+  text-align: center;
+}
+.activity-img img {
+  width: 50px;
+  height: 50px;
+}
+.activity-desc h5 {
+  color: #000;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.activity-desc h5 a {
+  color: #000;
+}
+.activity-desc p {
+  color: #999;
+  font-size: 0.94em;
+  line-height: 1.7em;
+}
+.activity-desc h6 {
+  color: #fd7b87;
+  font-size: 13px;
+  margin: 13px 0 0 0;
+  font-weight: bold;
+}
+
+#style-2::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  background-color: #fda660;
+}
