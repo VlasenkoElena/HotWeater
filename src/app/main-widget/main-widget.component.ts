@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { Info } from '../model/interface';
 
 @Component({
   selector: 'app-main-widget',
@@ -7,11 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MainWidgetComponent implements OnInit {
 
-  @Input() info;
-  constructor() { }
+  @Input() information;
+  info: Info;
+  
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    console.log(this.info); 
+    const detail = this.dataService.mySubject
+    .subscribe((data) => {
+       this.info= data;
+    }
+   )
   }
-
 }

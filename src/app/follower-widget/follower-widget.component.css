@@ -53,5 +53,11 @@ span.w-line {
 }
 .teddy-text img {
   border-radius: 70px;
+  width: 100px;
+  height: 100px;
   border: 3px solid #fff;
 }
+/*.img-responsive {
+  width: 100px;
+  height: 100px;
+}*/

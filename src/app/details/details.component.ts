@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-details',
@@ -8,11 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   @Input() info;
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    console.log(this.info);
-    
+
+  }
+  moreDetail() {
+    this.dataService.addData(this.info)  
   }
 
 }

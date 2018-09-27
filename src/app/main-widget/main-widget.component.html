@@ -1,11 +1,11 @@
 <div class="element-left">
-  <div class="element-bg-img"><img src="./assets/img/1.jpg" alt="" class="img-responsive"> </div>
+  <div class="element-bg-img">
+    <img src="{{info?.photo[0]}}" alt="" class="img-responsive"> </div>
   <div class="element-left-bottom">
     <div class="ele-strip">
       <ul>
         <li><a href="#">Hotel</a></li>
-        <li><a href="#">Fishing</a></li>
-        <li><a href="#">Tours</a></li>
+        <li><a href="#">Restaurans</a></li>
         <li class="anc-bor"><a href="#">Weather</a></li>
       </ul>
     </div>
@@ -14,7 +14,7 @@
         <span class="line"> </span>
         <div class="activity_box">
         <div class="scrollbar" id="style-2">
-            <app-details [info]="i"  *ngFor="let i of info"></app-details> 
+            <app-details [info]="info"  *ngFor="let info of information"></app-details> 
         </div>
         </div>      
     </div>

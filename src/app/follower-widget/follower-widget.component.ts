@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-follower-widget',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FollowerWidgetComponent implements OnInit {
 
-  constructor() { }
+  item;
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    const detail = this.dataService.mySubject
+    .subscribe((data) => {
+       this.item= data;
+    }
+   )
   }
 
 }

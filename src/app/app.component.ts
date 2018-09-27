@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Info } from './model/interface';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   
-  info = [
+  info: Info[] = [
     { 
       title: 'Nature',
       phone: '+1285 968 685',
@@ -17,11 +18,11 @@ export class AppComponent implements OnInit{
         'http://localhost:4200/assets/img/1.jpg',
         'http://localhost:4200/assets/img/b1.jpg'
       ],
-      weather: [{
+      weather: {
         temp: 14,
         cloudy: 'http://localhost:4200/assets/img/cloudy.png',
         water: 20
-      }]
+      }
     },
 
     {
@@ -33,11 +34,11 @@ export class AppComponent implements OnInit{
         'http://localhost:4200/assets/img/2.jpg',
         'http://localhost:4200/assets/img/res_g.jpg'
       ],
-      weather: [{
+      weather: {
         temp: 20,
         cloudy: 'http://localhost:4200/assets/img/cloudy.png',
         water: 22
-      }]
+      }
     },
 
     {
@@ -49,16 +50,15 @@ export class AppComponent implements OnInit{
         'http://localhost:4200/assets/img/gora.jpg',
         'http://localhost:4200/assets/img/rest03.jpg'
       ],
-      weather: [{
+      weather: {
         temp: 30,
         cloudy: 'http://localhost:4200/assets/img/cloudy.png',
         water: 26
-      }]
+      }
     }
   ]
  
  ngOnInit() {
-   console.log(this.info);
   }
 
 }

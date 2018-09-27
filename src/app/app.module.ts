@@ -6,6 +6,7 @@ import { MainWidgetComponent } from './main-widget/main-widget.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 import { FollowerWidgetComponent } from './follower-widget/follower-widget.component';
 import { DetailsComponent } from './details/details.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DetailsComponent } from './details/details.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

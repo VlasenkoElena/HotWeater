@@ -17,6 +17,7 @@
 }
 .element-bg-img img {
   width: 100%;
+  height: 200px;
   border-radius: 6px 6px 0px 0px;
 }
 .village {
