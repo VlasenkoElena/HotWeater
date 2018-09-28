@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { MainWidgetComponent } from './main-widget/main-widget.component';
@@ -7,6 +8,8 @@ import { WeatherWidgetComponent } from './weather-widget/weather-widget.componen
 import { FollowerWidgetComponent } from './follower-widget/follower-widget.component';
 import { DetailsComponent } from './details/details.component';
 import { DataService } from './services/data.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { StyleDirective } from './directives/style.directive';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import { DataService } from './services/data.service';
     MainWidgetComponent,
     WeatherWidgetComponent,
     FollowerWidgetComponent,
-    DetailsComponent
+    DetailsComponent,
+    FilterPipe,
+    StyleDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [DataService],
+  providers: [DataService, FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

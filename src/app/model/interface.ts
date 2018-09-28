@@ -3,6 +3,7 @@ export interface Info  {
     phone: string;
     followers: number;
     following: number;
+    type: string;
     photo: string[];
     weather: {
         temp: number;

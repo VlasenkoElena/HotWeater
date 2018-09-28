@@ -4,9 +4,9 @@
   <div class="element-left-bottom">
     <div class="ele-strip">
       <ul>
-        <li><a href="#">Hotel</a></li>
-        <li><a href="#">Restaurans</a></li>
-        <li class="anc-bor"><a href="#">Weather</a></li>
+        <li><a href="#" appStyle (click)="type ='hotel'" >Hotel</a></li>
+        <li><a href="#"  appStyle (click)="type ='rest'" >Restaurans</a></li>
+        <li class="anc-bor"><a href="#" appStyle  (click)="type = 'all'">ALL</a></li>
       </ul>
     </div>
     <div class="village">
@@ -14,7 +14,7 @@
         <span class="line"> </span>
         <div class="activity_box">
         <div class="scrollbar" id="style-2">
-            <app-details [info]="info"  *ngFor="let info of information"></app-details> 
+            <app-details [info]="info"  *ngFor="let info of information | filterInfo: type"></app-details> 
         </div>
         </div>      
     </div>

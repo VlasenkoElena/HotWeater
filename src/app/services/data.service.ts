@@ -12,6 +12,7 @@ export class DataService {
     phone: "+1285 968 685",
     followers: 2850,
     following: 675,
+    type: 'hotel',
     photo: [
       "http://localhost:4200/assets/img/1.jpg",
       "http://localhost:4200/assets/img/b1.jpg"

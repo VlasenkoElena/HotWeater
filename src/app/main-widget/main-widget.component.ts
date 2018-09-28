@@ -2,15 +2,20 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Info } from '../model/interface';
 
+
+
 @Component({
   selector: 'app-main-widget',
   templateUrl: './main-widget.component.html',
-  styleUrls: ['./main-widget.component.css']
+  styleUrls: ['./main-widget.component.css'],
+ 
 })
 export class MainWidgetComponent implements OnInit {
 
   @Input() information;
+  @Input() appStyle;
   info: Info;
+  type = 'all';
   
   constructor(private dataService: DataService) { }
 
@@ -21,4 +26,5 @@ export class MainWidgetComponent implements OnInit {
     }
    )
   }
+
 }
