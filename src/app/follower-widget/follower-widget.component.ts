@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { AutoUnsubscribe } from '../auto-unsubscribe';
+import { takeUntil } from 'rxjs/operators';
+import { Info } from '../model/interface';
 
 @Component({
   selector: 'app-follower-widget',
   templateUrl: './follower-widget.component.html',
   styleUrls: ['./follower-widget.component.css']
 })
-export class FollowerWidgetComponent implements OnInit {
+export class FollowerWidgetComponent extends AutoUnsubscribe implements OnInit {
 
-  item;
-  constructor(private dataService: DataService) { }
+  item: Info;
+  constructor(private dataService: DataService) {
+    super()
+   }
 
   ngOnInit() {
-    const detail = this.dataService.mySubject
+    this.dataService.mySubject
+    .pipe(takeUntil(this.unsubscribe))
     .subscribe((data) => {
        this.item= data;
     }

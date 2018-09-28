@@ -11,6 +11,7 @@ export class DetailsComponent implements OnInit {
   @Input() info;
   constructor(private dataService: DataService) { }
 
+  color = '#f5f5f5'
   ngOnInit() {
 
   }
