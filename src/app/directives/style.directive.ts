@@ -12,23 +12,6 @@ import {
 export class StyleDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  @Input("appStyle")
-  color: string;
-
-  private highlight(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
-  }
-
-  @HostListener("mouseenter")
-  onMouseEnter() {
-    this.highlight(this.color);
-  }
-
-  @HostListener("mouseleave")
-  onMouseLeave() {
-    this.highlight(null);
-  }
-
   @HostListener("click", ["$event.target"])
   onclick(param) {
     if (param == this.el.nativeElement) {

@@ -12,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 import { DataService } from './services/data.service';
 import { FilterPipe } from './pipes/filter.pipe';
 import { StyleDirective } from './directives/style.directive';
+import { BackgroundDirective } from './directives/background.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StyleDirective } from './directives/style.directive';
     FollowerWidgetComponent,
     DetailsComponent,
     FilterPipe,
-    StyleDirective
+    StyleDirective,
+    BackgroundDirective
   ],
   imports: [
     BrowserModule,

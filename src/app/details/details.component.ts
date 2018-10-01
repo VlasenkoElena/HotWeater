@@ -11,14 +11,12 @@ export class DetailsComponent implements OnInit {
   @Input() info;
   constructor(private dataService: DataService) { }
 
-  color = '#f5f5f5'
+  color = '#f0f0f0';
   ngOnInit() {  
 
   }
 
-  moreDetail() {
-    console.log(this.info);
-    
+  moreDetail() {    
     this.dataService.addData(this.info);  
   }
 

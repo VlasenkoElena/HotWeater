@@ -3,7 +3,9 @@
   <h5>Et harum quidem</h5>
   <span class="w-line"> </span>
   <span class="cloud"> </span>
-  <h2>{{(info | async).weather.temp}}<sup class="degree">°</sup></h2>
-  <h6>Water {{(info | async).weather.water}}<sup class="degree">°</sup></h6>
+  <ng-container *ngIf="(info | async) as data">
+    <h2>{{data.weather.temp}}<sup class="degree">°</sup></h2>
+    <h6>Water {{data.weather.water}}<sup class="degree">°</sup></h6>
+  </ng-container>
 </div>
 </div>
