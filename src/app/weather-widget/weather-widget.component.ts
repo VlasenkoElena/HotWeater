@@ -3,6 +3,7 @@ import { DataService } from '../services/data.service';
 import { Info } from '../model/interface';
 import { AutoUnsubscribe } from '../auto-unsubscribe';
 import { takeUntil } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-weather-widget',
@@ -11,18 +12,12 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class WeatherWidgetComponent extends AutoUnsubscribe implements OnInit {
  
-  info: Info;
-  constructor(private dataService: DataService) {
+  info: Observable<Info>;
+  constructor(public dataService: DataService) {
     super()
    }
 
-
   ngOnInit() {
-    this.dataService.mySubject
-    .pipe(takeUntil(this.unsubscribe))
-    .subscribe((data) => {
-       this.info = data;
-    }
-   )
+    this.info = this.dataService.mySubject; 
   }
 }
